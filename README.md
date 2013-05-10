@@ -1,3 +1,6 @@
+Demonstrates an example of async DB logging with NLog and SQL Server in an ASP.NET MVC project.
+Also demonstrates error handling and reporting without using third party libraries like ELMAH.
+
 Logging
 ==============
 See Infrastructure\Diagnostics\ for logging and diagnostic info gathering classes.
