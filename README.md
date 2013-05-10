@@ -11,6 +11,6 @@ Generate batch log statements from home page.
 
 Error Handling
 ==============
-See Infrastructure\ErrorHandling\, Global.asax.cs, ErrorController, Views\Shared\Error.cshtml
-See configuration\emailSettings in web.config for error report email settings
+See Infrastructure\ErrorHandling\, Global.asax.cs, ErrorController, Views\Shared\Error.cshtml<br>
+See configuration\emailSettings in web.config for error report email settings<br>
 Generate test errors and responses from home page
