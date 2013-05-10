@@ -1,0 +1,54 @@
+﻿
+@section styles{
+    <link rel="stylesheet" href="~/Content/Error.css"/>
+}
+
+@{
+    var statusTitleMap = new Dictionary<int, string> {
+             {404, "Something got lost in the shuffle"},
+             {410, "Gone like yesterday"},
+             {500, "Something go boom"}
+         };
+}
+
+@section hero{
+    <div id="error-body" class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3">
+                @{ var errorClass = (Response.StatusCode == 404 || Response.StatusCode == 410) ? "_" + Response.StatusCode : "_500";}
+                <div id="errorImageBlock" class="@errorClass"></div>
+            </div>
+    
+            <div class="span8 offset1">
+                <div class="row-fluid">
+                    <div class="span12 text-center" id="status-code">
+                        @Response.StatusCode
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span12" id="well-this">
+                        @statusTitleMap[Response.StatusCode]
+                    </div>
+                </div>
+        
+                <div class="row-fluid">
+                    <div class="span11" id="message">
+                    @switch (Response.StatusCode)
+                    {
+                        case 404:
+                            @:We cannot find the page you are looking for. If you typed in the address, double check the spelling. If you got here by clicking a link, 
+                            @: <a href="mailto:customerservice@domain.com?subject=Page%20Not%20Found">let us know</a>.
+                            break;
+                        case 410:
+                            @:The page you are looking for is gone (permanently). If you feel you reached this page incorrectly, <a href="mailto:customerservice@domain.com?subject=Link%20Gone">let us know</a>.
+                            break;
+                        case 500:
+                            @:Oh dear, something's gone wrong. Our team has already been alerted to the problem and will fix it as soon as possible! 
+                            break;
+                    }  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

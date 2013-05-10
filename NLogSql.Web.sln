@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLogSql.Web", "NLogSql.Web\NLogSql.Web.csproj", "{9D2D52C8-8040-4256-A2CA-146A6803AE5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{750B1F6C-EA5C-4DA7-9AA3-238637BCA361}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLogSql.Domain", "NLogSql.Domain\NLogSql.Domain.csproj", "{2BBE7D40-F6CF-446C-8226-42076600F056}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLogSql.Data", "NLogSql.Data\NLogSql.Data.csproj", "{2CD66E29-6681-4473-905D-D48B746C0D1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLogSql.Services", "NLogSql.Services\NLogSql.Services.csproj", "{91643F6E-7060-4612-97A8-BB13BD946269}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BC75CCB8-88BC-4403-96DF-BBE334066CC3}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D2D52C8-8040-4256-A2CA-146A6803AE5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D2D52C8-8040-4256-A2CA-146A6803AE5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D2D52C8-8040-4256-A2CA-146A6803AE5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D2D52C8-8040-4256-A2CA-146A6803AE5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BBE7D40-F6CF-446C-8226-42076600F056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BBE7D40-F6CF-446C-8226-42076600F056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BBE7D40-F6CF-446C-8226-42076600F056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BBE7D40-F6CF-446C-8226-42076600F056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CD66E29-6681-4473-905D-D48B746C0D1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CD66E29-6681-4473-905D-D48B746C0D1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CD66E29-6681-4473-905D-D48B746C0D1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CD66E29-6681-4473-905D-D48B746C0D1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91643F6E-7060-4612-97A8-BB13BD946269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91643F6E-7060-4612-97A8-BB13BD946269}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91643F6E-7060-4612-97A8-BB13BD946269}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91643F6E-7060-4612-97A8-BB13BD946269}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

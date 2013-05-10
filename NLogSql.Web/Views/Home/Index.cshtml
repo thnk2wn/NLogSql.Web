@@ -1,0 +1,84 @@
+﻿@using System.Globalization
+@model NLogSql.Web.Models.HomeModel
+
+@{
+	ViewBag.Title = "Home";
+}
+
+@section styles
+{
+	<style type="text/css">
+		div.span2:nth-child(5n+1) {
+			margin-left: 0;
+			clear: both;
+		}
+
+		a.errorLink {
+			color: red;
+		    cursor: hand; cursor: pointer;
+		}
+	</style>
+}
+
+@section featured {
+	<section class="featured">
+		<div class="content-wrapper">
+			<hgroup class="title">
+				<h1>@ViewBag.Title.</h1>
+				<h2>@ViewBag.Message</h2>
+			</hgroup>
+			<p>
+				See usages of ILog, Web.config and DiagnosticsModule.
+			</p>
+		</div>
+	</section>
+}
+
+@using (Html.BeginForm(MVC.Home.GenerateTestException(null), FormMethod.Post, 
+	new { name = "errorForm", id = "errorForm" }))
+{
+	@Html.Hidden("someData", DateTime.Now.Ticks.ToString(CultureInfo.InvariantCulture));
+}
+
+<h3>What kind of music are you in the mood for?</h3>
+<ol class="round">
+	<li class="one">
+		<h5>Pick a Genre</h5>
+		
+		<div class="row-fluid">
+			@foreach (var genre in Model.Genres)
+			{
+				<div class="span2"><a target="_blank" href="@string.Format("http://www.last.fm/search?q={0}", @genre.Name)">@genre.Name</a></div>
+			}
+		</div>
+	</li>
+	
+	<li class="two">
+		<h5>Log a bunch</h5>
+		
+		@Html.ActionLink("Batch Test", MVC.Home.BatchTest())
+	</li>
+	
+	<li class="three">
+		<h5>Cause Problems</h5>
+		
+		<div class="row-fluid">
+			@*<div class="span3">@Html.ActionLink("500 Exception", MVC.Home.GenerateTestException(), new {@class = "errorLink"})</div>*@
+			<div class="span3"><a class="errorLink">500 Exception</a></div>
+			<div class="span3"><a href="badUrl/@DateTime.Now.Ticks">404 Not Found</a></div>
+			<div class="span3">@Html.ActionLink("410 Gone Permanently", MVC.Error.Gone())</div>
+		</div>
+	</li>
+</ol>
+
+
+@section scripts
+{
+	<script>
+	    $(function () {
+		    $(".errorLink").click(function () {
+		        $("#errorForm").submit();
+		    });
+		});
+	</script>
+}

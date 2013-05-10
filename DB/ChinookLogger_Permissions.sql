@@ -1,0 +1,1 @@
+GRANT EXECUTE on dbo.sLogEvent_Insert to ChinookLogger;

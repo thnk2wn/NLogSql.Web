@@ -1,0 +1,110 @@
+﻿.hero-unit {
+    margin-top: -36px;
+    padding:0;
+    background: url(/images/bg-mosaic.png) no-repeat top center;
+}
+
+._404 {
+   background: url(/Content/images/404.jpg) no-repeat 0 0; 
+}
+
+._410 {
+   background: url(/Content/images/410.jpg) no-repeat 0 0; 
+}
+
+._500 {
+   background: url(/Content/images/500.jpg) no-repeat 0 0; 
+}
+
+.main-content {
+    background: none;
+}
+
+#errorImageBlock
+{
+    background-position: top;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    height: 400px;
+    margin: auto;
+    width: 400px;
+}
+
+#status-code
+{
+    color: #ffffff;
+    font-family: lato, Arial;
+    font-size: 271px;
+    font-size: 17.1rem;
+    font-weight: bold;
+    height: 271px;
+    height: 17.1rem;
+    line-height: 271px;
+    line-height: 17.1rem;
+    -webkit-text-shadow: #ccc .2rem .2rem .2rem;
+    text-shadow: #ccc .2rem .2rem .2rem;
+}
+
+#well-this {
+    font-size: 45px;
+    font-size: 3.2rem;
+    color: #a5a5a5;
+    font-family: lato, Arial;
+    margin: 10px 0 20px 80px;
+    line-height: 48px;
+}
+
+#message {
+    font-family: lato, Arial;
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: #666;
+    margin-left: 80px;
+}
+
+@media (min-width: 801px) and (max-width: 1000px) {
+    #status-code {
+        font-size: 200px;
+        height: 200px;
+        line-height: 200px;
+    }
+
+    #error-body .span8 {
+        width:54.66782457663917%;
+        margin-left:22%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 800px)
+{
+    #error-body [class*=span] {
+        text-align:center;
+        width:100%;
+        margin-left:0;
+    }
+
+    #errorImageBlock {
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #status-code
+    {
+        font-size: 144px;
+        height: 144px;
+        line-height: 144px;
+    }
+
+    #well-this
+    {
+        font-size: 28px;
+        font-size: 2.8rem;
+        color: #a5a5a5;
+        font-family: lato, Arial;
+        margin: 10px 0 20px 0;
+        line-height: 32px;
+    }
+}
